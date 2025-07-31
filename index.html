@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recommendation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 AI Recommendation System</h1>
+            <p>Discover personalized movie recommendations using collaborative and content-based filtering</p>
+        </div>
+
+        <div class="main-content">
+            <div class="algorithm-selector">
+                <button class="algorithm-btn active" data-algorithm="collaborative">
+                    🤝 Collaborative Filtering
+                </button>
+                <button class="algorithm-btn" data-algorithm="content">
+                    📊 Content-Based Filtering
+                </button>
+                <button class="algorithm-btn" data-algorithm="hybrid">
+                    🔄 Hybrid Approach
+                </button>
+            </div>
+
+            <div class="algorithm-info" id="algorithmInfo">
+                <h4>🤝 Collaborative Filtering</h4>
+                <p><strong>How it works:</strong> Finds users with similar preferences and recommends items they liked</p>
+                <p><strong>Technique:</strong> User-User similarity using cosine similarity and Pearson correlation</p>
+                <p><strong>Best for:</strong> Popular items with many ratings, discovering new genres</p>
+            </div>
+
+            <div class="user-profile">
+                <div class="profile-header">
+                    <div class="profile-avatar" id="profileAvatar">👤</div>
+                    <div class="profile-info">
+                        <h3 id="profileName">Select a User</h3>
+                        <p id="profileStats">Choose a user to see recommendations</p>
+                    </div>
+                </div>
+                
+                <div class="user-selector" id="userSelector">
+                    <!-- User buttons will be populated here -->
+                </div>
+
+                <div class="ratings-section">
+                    <h4>📊 Rate Movies to Improve Recommendations</h4>
+                    <div class="ratings-grid" id="ratingsGrid">
+                        <!-- Rating cards will be populated here -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendations-section">
+                <h2 class="section-title">🎯 Personalized Recommendations</h2>
+                <div class="recommendations-grid" id="recommendationsGrid">
+                    <div class="no-recommendations">
+                        Select a user and rating algorithm to see recommendations
+                    </div>
+                </div>
+            </div>
+
+            <div class="similarity-matrix" id="similarityMatrix" style="display: none;">
+                <h4>👥 User Similarity Matrix</h4>
+                <p>Shows how similar users are to each other (higher values = more similar)</p>
+                <div class="matrix-grid" id="matrixGrid">
+                    <!-- Matrix will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>
